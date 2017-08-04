@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>teste</title>
+	<script
+  	src="https://code.jquery.com/jquery-3.2.1.min.js"
+  	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  	crossorigin="anonymous">
+  	</script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/stylePopColor.css" type="text/css">
+
+	<script type="text/javascript" src="js/popColorGame.js"> </script>
+</head>
+<body >
+	&nbsp;
+	<!-- Main -->
+	<div class="container">
+		<div class="col-md-6">
+			<form action="#" name="jogo">
+				<span><b>Nivel de dificuldade:</b></span>
+				<select name="nivel"  class="form-control"  onchange="validaNivelAlteraCampos()">
+					<option id="nivelDificuldade" value="0">Selecione</option>
+					<option value="1">Facil</option>
+					<option value="2">Intermediario</option>
+					<option value="3">Dificil</option>
+				</select><!--/select-->
+
+				&nbsp;<p><b>Escolha as 4 cores abaixo:</b></p>
+				<!-- Opções das cores -->
+				<span id="facil" >
+				
+					<select name="primeiro" id="bloco1" class="form-control  bloco">
+						<option value="4">Selecione o nivel de dificuldade!</option>
+					</select>&nbsp;
+
+					<select name="primeiro" id="bloco2" class="form-control   bloco ">
+						<option value="4">Selecione o nivel de dificuldade!</option>
+					</select>&nbsp;
+
+					<select name="primeiro" id="bloco3" class="form-control   bloco">
+						<option value="4">Selecione o nivel de dificuldade!</option>
+					</select>&nbsp;
+
+					<select name="primeiro" id="bloco4" class="form-control   bloco">
+						<option value="4">Selecione o nivel de dificuldade!</option>
+					</select>&nbsp;
+
+				</span><!--/spanFacil-->
+				<!-- Seculos -->
+				<br>
+
+				<button type="button" id="btnJogar" class="btn btn-success" onclick="jogar()">Jogar</button>
+				<button type="button" id="btnDesistir"  onclick="desistir()" class="btn btn-danger">Desistir</button>
+				<button type="button" id="btnNovoJogo" onclick="novoJogo()" class="btn btn-primary">Novo jogo</button>
+					
+			</form>
+		</div><!-- /Col-md-6 -->
+
+		<div class="col-md-6"	>
+			<div class="alert alert-info">
+				<h4><b>Explicação</b></h4>
+				Jogo de lógica, cujo objetivo é encontrar a combinação secreta de cores. São três níveis de dificuldade. É possível desvendar a sequência através do número de erros e da comparação com os resultados anteriores
+				<hr>
+				O objetivo deste jogo é encontrar a combinação secreta de cores. No nível fácil, escolha uma entre quatro cores para cada bloco, sendo que você tem dez chances para acertar. No nível médio, são cinco cores disponíveis e doze chances. Já no nível difícil, são seis cores e quatorze chances. Lembrando que uma mesma cor pode estar presente em mais de um bloco. A quantidade de erros por jogada é mostrada ao lado dos blocos. Boa sorte!
+			</div>
+			
+		</div><!-- /Col-md-6 -->
+	</div><!-- /Container -->
+
+	<div class="container">
+	&nbsp;
+	&nbsp;		
+		<div id="status">
+			<!-- Aqui vai o conteudo -->
+		</div>
+		&nbsp;
+		&nbsp;
+		<hr>
+		<div class="panel panel-default">
+			<div class="panel-footer">Desenvolvido por: <b>Lorena Kauane</b></div>
+		</div>
+
+	</div>
+
+	
+
+</body>
+</html>
